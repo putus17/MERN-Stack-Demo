@@ -2,16 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Code,
-  Zap,
-  Palette,
-  LifeBuoy,
-  Server,
-  Cpu,
-  Users,
-  CheckCircle,
-} from "lucide-react";
+import { Code, Zap, Palette, LifeBuoy, Server, Cpu, Users, CheckCircle } from "lucide-react";
 
 const servicesData = [
   {
@@ -24,7 +15,7 @@ const servicesData = [
     icon: <Zap className="w-8 h-8 text-blue-700" />,
     title: "API Integration",
     description:
-      "Seamless integration with third-party services and APIs to extend your application&apos;s functionality and efficiency.",
+      "Seamless integration with third-party services and APIs to extend your application’s functionality and efficiency.",
   },
   {
     icon: <Palette className="w-8 h-8 text-blue-700" />,
@@ -67,6 +58,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-blue-50 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,9 +79,7 @@ export default function ServicesPage() {
             >
               <div className="flex-shrink-0">{icon}</div>
               <div>
-                <h3 className="text-2xl font-semibold text-blue-800 mb-2">
-                  {title}
-                </h3>
+                <h3 className="text-2xl font-semibold text-blue-800 mb-2">{title}</h3>
                 <p className="text-gray-700 leading-relaxed">{description}</p>
               </div>
             </motion.li>
@@ -101,6 +91,7 @@ export default function ServicesPage() {
         <Technologies />
         <Testimonials />
         <CallToAction />
+
       </div>
     </main>
   );
@@ -119,11 +110,7 @@ function MoreDetails() {
         Tailored Solutions for Your Business
       </h3>
       <p className="text-gray-800 max-w-3xl mx-auto leading-relaxed text-center">
-        Whether you&apos;re a startup looking to build your first product or an
-        established company aiming to enhance your platform, our flexible MERN
-        stack expertise allows us to adapt and deliver exactly what you need.
-        From rapid prototyping to production-ready deployments, we&apos;re your
-        partner every step of the way.
+        Whether you're a startup looking to build your first product or an established company aiming to enhance your platform, our flexible MERN stack expertise allows us to adapt and deliver exactly what you need. From rapid prototyping to production-ready deployments, we’re your partner every step of the way.
       </p>
     </motion.section>
   );
@@ -202,10 +189,9 @@ function Testimonials() {
             key={i}
             className="bg-white p-8 rounded-3xl shadow-lg border border-blue-100 text-gray-700"
           >
-            <p className="italic mb-6">&quot;{feedback}&quot;</p>
+            <p className="italic mb-6">"{feedback}"</p>
             <footer className="font-semibold text-indigo-700">
-              {name},{" "}
-              <span className="font-normal text-gray-500">{role}</span>
+              {name}, <span className="font-normal text-gray-500">{role}</span>
             </footer>
           </blockquote>
         ))}
@@ -227,8 +213,7 @@ function CallToAction() {
         Ready to elevate your project?
       </h3>
       <p className="text-gray-700 mb-8">
-        Contact our expert team today and let&apos;s turn your ideas into a
-        powerful, scalable web application built with the MERN stack.
+        Contact our expert team today and let's turn your ideas into a powerful, scalable web application built with the MERN stack.
       </p>
       <a href="/contact" aria-label="Contact Us">
         <button className="bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-full font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-blue-400">
